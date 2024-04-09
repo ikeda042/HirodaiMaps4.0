@@ -46,7 +46,7 @@ export const TopPage = () => {
 
     return (
         <>
-            <Box sx={{ backgroundColor: '#FFFFFF', margin: 0, padding: 0 }}>
+            <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', backgroundColor: '#FFFFFF', margin: 0, padding: 0 }}>
                 <NavBar />
                 <Box sx={{ marginTop: '64px', marginBottom: '64px' }}>
                     <SearchBar onSearch={handleSearch} />
