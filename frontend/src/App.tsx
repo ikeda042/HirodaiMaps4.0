@@ -9,8 +9,8 @@ function App() {
     <Box sx={{ backgroundColor: '#FFFFFF', margin: 0, padding: 0 }}>
       <NavBar />
       <Box sx={{ marginTop: '64px' }}>
-        <BuildingCard />
-        <BuildingCard />
+        <BuildingCard imageUrl='building1.jpg' title='title1' />
+        <BuildingCard imageUrl='building1.jpg' title='title2' />
       </Box>
       <BottomNavBar />
     </Box >
