@@ -23,22 +23,22 @@ function BuildingDetail() {
     const { buildingId } = useParams();
 
     return (
-        <Box sx={{ backgroundColor: '#FFFFFF', margin: 0, padding: 0 }}>
+        <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', height: '70vh' }}>
             <NavBar />
-            <Card sx={{ maxWidth: 350, maxHeight: 290 }}>
+            <Card sx={{ maxWidth: '90%', width: '100%', maxHeight: 290, margin: 'auto' }}>
                 <CardActionArea>
                     <CardMedia
                         component="img"
                         height="200"
-                        image={`/?w=200&h=200&fit=crop&auto=format`}
+                        image={`/building1.jpg`}
                         alt={"ALT"}
                     />
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="div">
-                            {"TITLE"}
+                            id = {buildingId}
                         </Typography>
                         <Typography variant="body2" color="text.secondary">
-                            {"desc."}。
+                            {"説明:id" + buildingId}
                         </Typography>
                     </CardContent>
                 </CardActionArea>
@@ -46,7 +46,6 @@ function BuildingDetail() {
             <BottomNavBar />
         </Box >
     );
-
 
     // return (
     //     <div>
