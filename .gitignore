@@ -1,5 +1,6 @@
 *
 !.gitignore
 !frontend/
+!frontend/**
 !generate_thumbnail.py
 !README.md
