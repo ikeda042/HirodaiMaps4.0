@@ -25,6 +25,7 @@ export const TopPage = () => {
     const [searchQuery, setSearchQuery] = useState('');
 
     const [filteredBuildings, setFilteredBuildings] = useState<Building[]>([]);
+
     const handleSearch = (query: string) => {
         setSearchQuery(query);
     };
@@ -50,9 +51,9 @@ export const TopPage = () => {
                 <NavBar />
                 <Box sx={{ marginTop: '64px', marginBottom: '64px' }}>
                     <SearchBar onSearch={handleSearch} />
-                    {Array.from({ length: 10 }, (_, i) => (
-                        <Link to={`/building/${i + 1}`} style={{ textDecoration: 'none' }}>
-                            <BuildingCard key={i} imageUrl='building1.jpg' title={`title${i + 1}`} />
+                    {filteredBuildings.map((building, i) => (
+                        <Link to={`/building/${building.buildingId}`} style={{ textDecoration: 'none' }}>
+                            <BuildingCard key={i} imageUrl={"/building1.jpg"} title={building.title} />
                         </Link>
                     ))}
                 </Box>
