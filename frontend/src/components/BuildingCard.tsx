@@ -4,8 +4,12 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 
 
-export const BuildingCard = () => {
+interface BuildingCardProps {
+    imageUrl: string;
+    title: string;
+}
 
+export const BuildingCard: React.FC<BuildingCardProps> = ({ imageUrl, title }) => {
     return (
         <div style={{ margin: '0 1%' }}>
             <Card sx={{
@@ -14,7 +18,7 @@ export const BuildingCard = () => {
                 display: 'flex',
                 alignItems: 'center',
                 margin: '0.5% auto',
-                borderRadius: "10px"
+                borderRadius: "10px",
             }}>
                 <CardMedia
                     component="img"
@@ -25,7 +29,7 @@ export const BuildingCard = () => {
                         alignSelf: 'center',
                         borderRadius: '20%',
                     }}
-                    image={"building1.jpg"}
+                    image={imageUrl}
                     alt="Building Image"
                 />
                 <CardContent sx={{ flex: 1 }}>
@@ -39,7 +43,7 @@ export const BuildingCard = () => {
                             height: '100%'
                         }}
                     >
-                        title2333
+                        {title}
                     </Typography>
                 </CardContent>
             </Card>
