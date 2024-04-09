@@ -8,6 +8,7 @@ import { CardActionArea } from '@mui/material';
 import { NavBar } from './Navbar';
 import BottomNavBar from './BottomNav';
 import Box from '@mui/material/Box';
+import { Link } from 'react-router-dom';
 
 
 function BuildingDetail() {
@@ -15,7 +16,9 @@ function BuildingDetail() {
 
     return (
         <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', height: '70vh' }}>
+
             <NavBar />
+
             <Card sx={{ maxWidth: '90%', width: '100%', maxHeight: 290, margin: 'auto' }}>
                 <CardActionArea>
                     <CardMedia
