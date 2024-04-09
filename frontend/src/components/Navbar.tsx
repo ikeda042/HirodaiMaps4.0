@@ -6,8 +6,8 @@ import QrCodeIcon from '@mui/icons-material/QrCode';
 
 export const NavBar = () => {
     return (
-        <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static" sx={{ backgroundColor: '#005e3c', position: "fixed" }}>
+        <Box >
+            <AppBar sx={{ backgroundColor: '#005e3c', position: "fixed" }}>
                 <Toolbar>
                     <Box>
                         <Typography variant="h6" component="div" sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', fontFamily: "Helvetica", fontSize: '1.7rem' }}>
