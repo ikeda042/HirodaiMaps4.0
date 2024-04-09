@@ -22,10 +22,10 @@ export const BuildingCard = () => {
                         width: 100,
                         height: 75,
                         padding: '2%',
-                        borderRadius: '15px',
                         alignSelf: 'center',
+                        borderRadius: '20%',
                     }}
-                    image={"a.png"}
+                    image={"building1.jpg"}
                     alt="Building Image"
                 />
                 <CardContent sx={{ flex: 1 }}>
