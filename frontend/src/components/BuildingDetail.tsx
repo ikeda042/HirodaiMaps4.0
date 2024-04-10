@@ -44,7 +44,7 @@ function BuildingDetail() {
 
 
             </Box >
-            <Box justifyContent="center" alignItems="center">
+            <Box sx={{ width: '100%', maxWidth: '90%', aspectRatio: '1', margin: 'auto', mb: "100px" }}>
                 <Map lat={`${building?.lat}`} lon={`${building?.lon}`} title={`${building?.title}`} />
             </Box>
             <BottomNavBar />
