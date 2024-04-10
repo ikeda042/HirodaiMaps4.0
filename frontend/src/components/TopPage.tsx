@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import SearchBar from './SearchBar';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { Typography } from '@mui/material';
 import buildings from './BuildingData';
 
 type Building = {
@@ -49,6 +50,12 @@ export const TopPage = () => {
             <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', backgroundColor: '#FFFFFF', margin: 0, padding: 0 }}>
                 <NavBar />
                 <Box sx={{ marginTop: '64px', marginBottom: '64px' }}>
+                    <Box sx={{ border: '1px solid', padding: '10px', marginBottom: '20px', borderRadius: "2%", margin: "7px" }}>
+                        <Typography variant="body1">
+                            現在地は ?=QRID です。検索バーで目的地の建物名を入力して、建物を選択してください。<br></br>
+                            (例：文学部、学生プラザ、工学部支援室 など)
+                        </Typography>
+                    </Box>
                     <SearchBar onSearch={handleSearch} />
                     {filteredBuildings.map((building, i) => (
                         <Link to={`/building/${building.buildingId}`} style={{ textDecoration: 'none' }}>
