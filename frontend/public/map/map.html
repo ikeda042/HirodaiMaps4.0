@@ -1,89 +1,92 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
-        <meta name="mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <link rel="stylesheet" href="css/leaflet.css">
-        <link rel="stylesheet" href="css/qgis2web.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
-        <style>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="css/leaflet.css">
+    <link rel="stylesheet" href="css/qgis2web.css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <style>
         #map {
             width: 350px;
             height: 350px;
         }
-        </style>
-        <title></title>
-    </head>
-    <body>
-        <div id="map">
-        </div>
-        <script src="js/qgis2web_expressions.js"></script>
-        <script src="js/leaflet.js"></script>
-        <script src="js/leaflet.rotatedMarker.js"></script>
-        <script src="js/leaflet.pattern.js"></script>
-        <script src="js/leaflet-hash.js"></script>
-        <script src="js/Autolinker.min.js"></script>
-        <script src="js/rbush.min.js"></script>
-        <script src="js/labelgun.min.js"></script>
-        <script src="js/labels.js"></script>
-        <script src="data/HiroshimaUniversityCircumference_0.js"></script>
-        <script src="data/HiroshimaUniversityRoads_1.js"></script>
-        <script src="data/HiroshimaUniversitySidewalks_2.js"></script>
-        <script src="data/HiroshimaUniversityBuildings_3.js"></script>
-        <script src="data/HiroshimaUniversityCarParkings_4.js"></script>
-        <script src="data/HiroshimaUniversityOutsideFacilities_5.js"></script>
-        <script src="data/HiroshimaUniversityBicycleParking_6.js"></script>
-        <script>
-      
-    //   var map = L.map('map', {
-    //         zoomControl:true, maxZoom:28, minZoom:1
-    //     }).fitBounds([[34.395148354228034,132.70402846325464],[34.40879768518813,132.72571311463867]]);
-        
+    </style>
+    <title></title>
+</head>
 
-//------------------------------------------------------------------------>
-//ピンをうつ処理
-var pointMarker; 
-const urlParams = new URLSearchParams(window.location.search);
+<body>
+    <div id="map">
+    </div>
+    <script src="js/qgis2web_expressions.js"></script>
+    <script src="js/leaflet.js"></script>
+    <script src="js/leaflet.rotatedMarker.js"></script>
+    <script src="js/leaflet.pattern.js"></script>
+    <script src="js/leaflet-hash.js"></script>
+    <script src="js/Autolinker.min.js"></script>
+    <script src="js/rbush.min.js"></script>
+    <script src="js/labelgun.min.js"></script>
+    <script src="js/labels.js"></script>
+    <script src="data/HiroshimaUniversityCircumference_0.js"></script>
+    <script src="data/HiroshimaUniversityRoads_1.js"></script>
+    <script src="data/HiroshimaUniversitySidewalks_2.js"></script>
+    <script src="data/HiroshimaUniversityBuildings_3.js"></script>
+    <script src="data/HiroshimaUniversityCarParkings_4.js"></script>
+    <script src="data/HiroshimaUniversityOutsideFacilities_5.js"></script>
+    <script src="data/HiroshimaUniversityBicycleParking_6.js"></script>
+    <script>
 
-const lat_query = urlParams.get('lat');
-const lon_query = urlParams.get('lon');
-const title_query = urlParams.get('title');
-console.log(lat_query);
-console.log(lon_query);
+        //   var map = L.map('map', {
+        //         zoomControl:true, maxZoom:28, minZoom:1
+        //     }).fitBounds([[34.395148354228034,132.70402846325464],[34.40879768518813,132.72571311463867]]);
 
-// マップの初期化
-var map = L.map('map', {
-    zoomControl: true, 
-    maxZoom: 28, 
-    minZoom: 1
-}).setView([parseFloat(lat_query), parseFloat(lon_query)], 18); // ここで lat と lon を正しく設定
 
-function addPoint(lat, lon, title) {
-    var pointLocation = L.latLng(lat, lon);
-    if (pointMarker) {
-        map.removeLayer(pointMarker); 
-    }
-    pointMarker = L.marker(pointLocation, {
-        icon: L.icon({
-            iconUrl: '../placeholder.png', // 赤いピンの画像へのパス
-            iconSize: [20, 20], // アイコンのサイズ
-            iconAnchor: [10, 20] , // アイコンの「くい」となるポイントを中心に設定
-            popupAnchor: [0, -20] // ポップアップが開く位置を調整
-        })
-    }).addTo(map);
-    pointMarker.bindPopup(title).openPopup();
-    map.setView(pointLocation, map.getZoom());
-}
+        //------------------------------------------------------------------------>
+        //ピンをうつ処理
+        var pointMarker;
+        const urlParams = new URLSearchParams(window.location.search);
 
-document.addEventListener('DOMContentLoaded', function() {
-    addPoint(parseFloat(lat_query), parseFloat(lon_query), title_query);
-});
-//------------------------------------------------------------------------>
+        const lat_query = urlParams.get('lat');
+        const lon_query = urlParams.get('lon');
+        const title_query = urlParams.get('title');
+        console.log(lat_query);
+        console.log(lon_query);
+
+        // マップの初期化
+        var map = L.map('map', {
+            zoomControl: true,
+            maxZoom: 28,
+            minZoom: 1
+        }).setView([parseFloat(lat_query), parseFloat(lon_query)], 18); // ここで lat と lon を正しく設定
+
+        function addPoint(lat, lon, title) {
+            var pointLocation = L.latLng(lat, lon);
+            if (pointMarker) {
+                map.removeLayer(pointMarker);
+            }
+            pointMarker = L.marker(pointLocation, {
+                icon: L.icon({
+                    iconUrl: '../placeholder.png', // 赤いピンの画像へのパス
+                    iconSize: [20, 20], // アイコンのサイズ
+                    iconAnchor: [10, 20], // アイコンの「くい」となるポイントを中心に設定
+                    popupAnchor: [0, -20] // ポップアップが開く位置を調整
+                })
+            }).addTo(map);
+            pointMarker.bindPopup(title).openPopup();
+            map.setView(pointLocation, map.getZoom());
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            addPoint(parseFloat(lat_query), parseFloat(lon_query), title_query);
+        });
+        //------------------------------------------------------------------------>
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
-        var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
+        var autolinker = new Autolinker({ truncate: { length: 30, location: 'smart' } });
         var bounds_group = new L.featureGroup([]);
         function setBounds() {
         }
@@ -165,7 +168,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <td colspan="2">' + (feature.properties['other_tags'] !== null ? autolinker.link(feature.properties['other_tags'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
+            layer.bindPopup(popupContent, { maxHeight: 400 });
         }
 
         function style_HiroshimaUniversityCircumference_0_0() {
@@ -176,7 +179,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
-                weight: 1.0, 
+                weight: 1.0,
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(255,255,242,1.0)',
@@ -203,7 +206,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <td colspan="2">' + (feature.properties['id'] !== null ? autolinker.link(feature.properties['id'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
+            layer.bindPopup(popupContent, { maxHeight: 400 });
         }
 
         function style_HiroshimaUniversityRoads_1_0() {
@@ -214,7 +217,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
-                weight: 1.0, 
+                weight: 1.0,
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(195,195,195,1.0)',
@@ -313,7 +316,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <td colspan="2">' + (feature.properties['other_tags'] !== null ? autolinker.link(feature.properties['other_tags'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
+            layer.bindPopup(popupContent, { maxHeight: 400 });
         }
 
         function style_HiroshimaUniversitySidewalks_2_0() {
@@ -324,7 +327,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
-                weight: 1.0, 
+                weight: 1.0,
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(229,216,189,1.0)',
@@ -372,7 +375,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <td colspan="2">' + (feature.properties['nickname'] !== null ? autolinker.link(feature.properties['nickname'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
+            layer.bindPopup(popupContent, { maxHeight: 400 });
         }
 
         function style_HiroshimaUniversityBuildings_3_0() {
@@ -383,7 +386,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
-                weight: 1.0, 
+                weight: 1.0,
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(179,205,227,1.0)',
@@ -416,7 +419,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <td colspan="2">' + (feature.properties['capacity'] !== null ? autolinker.link(feature.properties['capacity'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
+            layer.bindPopup(popupContent, { maxHeight: 400 });
         }
 
         function style_HiroshimaUniversityCarParkings_4_0() {
@@ -427,7 +430,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
-                weight: 1.0, 
+                weight: 1.0,
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(251,180,174,1.0)',
@@ -457,7 +460,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <td colspan="2">' + (feature.properties['name'] !== null ? autolinker.link(feature.properties['name'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
+            layer.bindPopup(popupContent, { maxHeight: 400 });
         }
 
         function style_HiroshimaUniversityOutsideFacilities_5_0() {
@@ -468,7 +471,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
-                weight: 1.0, 
+                weight: 1.0,
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(204,235,197,1.0)',
@@ -495,7 +498,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <td colspan="2">' + (feature.properties['id'] !== null ? autolinker.link(feature.properties['id'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
+            layer.bindPopup(popupContent, { maxHeight: 400 });
         }
 
         function style_HiroshimaUniversityBicycleParking_6_0() {
@@ -506,7 +509,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
-                weight: 1.0, 
+                weight: 1.0,
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(222,203,228,1.0)',
@@ -529,30 +532,31 @@ document.addEventListener('DOMContentLoaded', function() {
         map.addLayer(layer_HiroshimaUniversityBicycleParking_6);
         setBounds();
         var i = 0;
-        layer_HiroshimaUniversityBuildings_3.eachLayer(function(layer) {
+        layer_HiroshimaUniversityBuildings_3.eachLayer(function (layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['name'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['name']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_HiroshimaUniversityBuildings_3'});
+            layer.bindTooltip((layer.feature.properties['name'] !== null ? String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['name']) + '</div>' : ''), { permanent: true, offset: [-0, -16], className: 'css_HiroshimaUniversityBuildings_3' });
             labels.push(layer);
             totalMarkers += 1;
-              layer.added = true;
-              addLabel(layer, i);
-              i++;
+            layer.added = true;
+            addLabel(layer, i);
+            i++;
         });
         resetLabels([layer_HiroshimaUniversityBuildings_3]);
-        map.on("zoomend", function(){
+        map.on("zoomend", function () {
             resetLabels([layer_HiroshimaUniversityBuildings_3]);
             // addPoint(34.40565, 132.71251); 
         });
-        map.on("layeradd", function(){
+        map.on("layeradd", function () {
             resetLabels([layer_HiroshimaUniversityBuildings_3]);
         });
-        map.on("layerremove", function(){
+        map.on("layerremove", function () {
             resetLabels([layer_HiroshimaUniversityBuildings_3]);
         });
 
-        </script>
-    </body>
+    </script>
+</body>
+
 </html>
