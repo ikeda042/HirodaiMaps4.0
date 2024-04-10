@@ -20,9 +20,7 @@ function BuildingDetail() {
     return (
         <>
             <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', height: '70vh' }}>
-
                 <NavBar />
-
                 <Card sx={{ maxWidth: '90%', width: '100%', maxHeight: 290, margin: 'auto' }}>
                     <CardActionArea>
                         <CardMedia
@@ -41,8 +39,6 @@ function BuildingDetail() {
                         </CardContent>
                     </CardActionArea>
                 </Card>
-
-
             </Box >
             <Box sx={{ width: '100%', maxWidth: '90%', aspectRatio: '1', margin: 'auto', mb: "100px" }}>
                 <Map lat={`${building?.lat}`} lon={`${building?.lon}`} title={`${building?.title}`} />
