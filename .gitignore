@@ -2,5 +2,7 @@
 !.gitignore
 !frontend/
 !frontend/**
-!generate_thumbnail.py
+!pyfiles/
+!pyfiles/**
 !README.md
+
