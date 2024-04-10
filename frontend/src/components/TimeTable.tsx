@@ -6,7 +6,6 @@ import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import { useParams } from 'react-router-dom';
-import { parse } from 'path';
 import { Box } from '@mui/system';
 import { NavBar } from './Navbar';
 import { useState } from 'react';
