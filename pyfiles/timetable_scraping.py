@@ -13,10 +13,11 @@ time_deps = soup.find_all('span', {'class': 'time dep'})
 time_deps = [time_dep.text for time_dep in time_deps]
 
 
+print(time_deps)
 now = datetime.now()
 
 datetime_objects = [now.replace(hour=int(time.split(':')[0]), minute=int(time.split(':')[1])) for time in time_deps]
 
-for dt in datetime_objects:
-    if dt > now:
-        print(dt)
+# for dt in datetime_objects:
+#     print(dt)
+
