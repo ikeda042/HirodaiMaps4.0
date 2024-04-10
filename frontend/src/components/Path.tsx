@@ -7,7 +7,6 @@ import { useParams } from "react-router-dom";
 const Path = () => {
 
     const { dir, lat, lon } = useParams<{ dir: string, lat: string, lon: string }>();
-
     const height = window.innerHeight - 140;
 
     return (
