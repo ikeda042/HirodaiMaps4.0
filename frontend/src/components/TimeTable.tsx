@@ -68,10 +68,10 @@ const TimeTable = () => {
                         {futureTimes.map((time, index) => (
                             <TimelineItem key={index}>
                                 <TimelineSeparator>
-                                    <TimelineDot color={index === 0 ? "success" : "grey"} />
+                                    <TimelineDot color={index === 0 ? "success" : "grey"} sx={{ width: '15px', height: '15px' }} />
                                     {index !== futureTimes.length - 1 && <TimelineConnector />}
                                 </TimelineSeparator>
-                                <TimelineContent>{time}</TimelineContent>
+                                <TimelineContent sx={{ fontSize: '20px' }}>{time}</TimelineContent>
                             </TimelineItem>
                         ))}
                     </Timeline>
