@@ -10,9 +10,10 @@ import Box from '@mui/material/Box';
 import Map from './Map';
 import buildings from './BuildingData';
 import BottomNavBarTop from './BottomNavTop';
+import { useEffect } from 'react';
 
 
-function BuildingDetail() {
+const BuildingDetail = () => {
     const { buildingId } = useParams();
     const building = buildings.find(b => b.buildingId === buildingId);
 
