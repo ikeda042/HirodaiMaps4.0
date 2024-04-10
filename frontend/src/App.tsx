@@ -2,6 +2,7 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { TopPage } from './components/TopPage';
 import BuildingDetail from './components/BuildingDetail';
+import TimeTable from './components/TimeTable';
 
 function App() {
   return (
@@ -12,6 +13,9 @@ function App() {
         } />
         <Route path="/building/:buildingId" element={
           <BuildingDetail />
+        } />
+        <Route path="/timetable/:stopId" element={
+          <TimeTable />
         } />
       </Routes>
     </Router >
