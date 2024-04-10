@@ -12,7 +12,7 @@ import { useState } from 'react';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import { SelectChangeEvent } from '@mui/material/Select';
-import BottomNavBarTop from './BottomNavTop';
+import BottomNavBarTT from './BottomNavTT';
 
 const TimeTable = () => {
 
@@ -76,7 +76,7 @@ const TimeTable = () => {
                     </Timeline>
                 </Box>
             </Box >
-            <BottomNavBarTop />
+            <BottomNavBarTT />
         </>
     )
 }
