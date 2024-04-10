@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { TopPage } from './components/TopPage';
 import BuildingDetail from './components/BuildingDetail';
 import TimeTable from './components/TimeTable';
+import Path from './components/Path';
 
 function App() {
   return (
@@ -16,6 +17,9 @@ function App() {
         } />
         <Route path="/timetable/:stopId" element={
           <TimeTable />
+        } />
+        <Route path="/map/:dir/:lat/:lon" element={
+          < Path />
         } />
       </Routes>
     </Router >
