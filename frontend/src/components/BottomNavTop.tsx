@@ -4,17 +4,15 @@ import DepartureBoardIcon from '@mui/icons-material/DepartureBoard';
 import MyLocationIcon from '@mui/icons-material/MyLocation';
 import AccessibleIcon from '@mui/icons-material/Accessible';
 import { styled } from '@mui/material/styles';
-import { Link } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const CustomBottomNavigationAction = styled(BottomNavigationAction)((theme) => ({
     borderRight: '1px solid rgba(0, 0, 0, 0.12)',
-    borderLeft: '1px solid rgba(0, 0, 0, 0.12)',
     '&.Mui-selected': {
         color: '#005e3c',
         backgroundColor: '#f0f0f0',
     }
 }));
-
 
 const BottomNavBarTop = () => {
     return (
@@ -26,19 +24,19 @@ const BottomNavBarTop = () => {
             display: 'flex',
             justifyContent: 'space-around',
         }}>
-            <Link href="/timetable/1" style={{ display: 'flex' }}>
+            <Link to="/timetable/1" style={{ display: 'flex', flexGrow: 1 }}>
                 <CustomBottomNavigationAction
                     label="Departure"
                     icon={<DepartureBoardIcon />}
                 />
             </Link>
-            <Link href="/my-location" style={{ display: 'flex' }}>
+            <Link to="/my-location" style={{ display: 'flex', flexGrow: 1 }}>
                 <CustomBottomNavigationAction
                     label="My Location"
                     icon={<MyLocationIcon />}
                 />
             </Link>
-            <Link href="/accessibility" style={{ display: 'flex' }}>
+            <Link to="/accessibility" style={{ display: 'flex', flexGrow: 1 }}>
                 <CustomBottomNavigationAction
                     label="Accessibility"
                     icon={<AccessibleIcon />}
