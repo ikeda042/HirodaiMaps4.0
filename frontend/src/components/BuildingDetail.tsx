@@ -6,11 +6,12 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import { NavBar } from './Navbar';
-import BottomNavBar from './BottomNav';
+import BottomNavBar from './BottomNavTop';
 import Box from '@mui/material/Box';
 import { Link } from 'react-router-dom';
 import Map from './Map';
 import buildings from './BuildingData';
+import BottomNavBarTop from './BottomNavTop';
 
 
 function BuildingDetail() {
@@ -43,7 +44,7 @@ function BuildingDetail() {
             <Box sx={{ width: '100%', maxWidth: '90%', aspectRatio: '1', margin: 'auto', mb: "100px" }}>
                 <Map lat={`${building?.lat}`} lon={`${building?.lon}`} title={`${building?.title}`} />
             </Box>
-            <BottomNavBar />
+            <BottomNavBarTop />
         </>
     );
 

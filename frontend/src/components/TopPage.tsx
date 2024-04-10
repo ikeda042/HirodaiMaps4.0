@@ -1,7 +1,7 @@
 import { Box } from '@mui/system';
 import { BuildingCard } from './BuildingCard';
 import { NavBar } from './Navbar';
-import BottomNavBar from './BottomNav';
+import BottomNavBar from './BottomNavTop';
 import { Link } from 'react-router-dom';
 import SearchBar from './SearchBar';
 import { useState } from 'react';

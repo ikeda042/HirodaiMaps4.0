@@ -14,7 +14,7 @@ const CustomBottomNavigationAction = styled(BottomNavigationAction)((theme) => (
     }
 }));
 
-const BottomNavBar = () => {
+const BottomNavBarTop = () => {
     return (
         <BottomNavigation style={{
             width: '100%',
@@ -29,4 +29,4 @@ const BottomNavBar = () => {
     );
 }
 
-export default BottomNavBar;
+export default BottomNavBarTop;
