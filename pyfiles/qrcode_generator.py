@@ -1,6 +1,9 @@
 import qrcode             
 import qrcode.image.pil
 
-img = qrcode.make('https://hirodaimaps.com/paths/1') 
-img.save('qrcode.png')
+
+
+for i in range(1,9):
+    img = qrcode.make(f'https://hirodaimaps.com/{i}') 
+    img.save(f'qr_images/qrcode{i}.png')
 
