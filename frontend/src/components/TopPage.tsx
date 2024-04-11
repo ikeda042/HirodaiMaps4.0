@@ -8,6 +8,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import { Typography } from '@mui/material';
 import buildings from './BuildingData';
+import { useParams } from 'react-router-dom';
 
 type Building = {
     buildingId: string;
@@ -23,8 +24,8 @@ type Building = {
 
 export const TopPage = () => {
     const [searchQuery, setSearchQuery] = useState('');
-
     const [filteredBuildings, setFilteredBuildings] = useState<Building[]>([]);
+    const { checkpointId } = useParams();
 
     const handleSearch = (query: string) => {
         setSearchQuery(query);
@@ -52,7 +53,7 @@ export const TopPage = () => {
                 <Box sx={{ marginTop: '64px', marginBottom: '64px' }}>
                     <Box sx={{ border: '1px solid', padding: '10px', marginBottom: '20px', borderRadius: "2%", margin: "7px" }}>
                         <Typography variant="body1">
-                            現在地は ?=QRID です。検索バーで目的地の建物名を入力して、建物を選択してください。<br></br>
+                            現在地は{checkpointId}です。検索バーで目的地の建物名を入力して、建物を選択してください。<br></br>
                             (例：文学部、学生プラザ、工学部支援室 など)
                         </Typography>
                     </Box>
