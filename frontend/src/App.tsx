@@ -18,7 +18,7 @@ function App() {
         <Route path="/timetable/:stopId" element={
           <TimeTable />
         } />
-        <Route path="/path/:pathId" element={
+        <Route path="/paths/:pathId" element={
           < Path />
         } />
       </Routes>
