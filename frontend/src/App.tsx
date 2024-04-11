@@ -9,7 +9,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={
+        <Route path="/:checkpointId" element={
           <TopPage />
         } />
         <Route path="/building/:buildingId" element={
