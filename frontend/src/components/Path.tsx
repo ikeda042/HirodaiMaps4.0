@@ -9,7 +9,7 @@ const Path = () => {
 
     const { pathId } = useParams<{ pathId: string }>();
     const height = window.innerHeight - 140;
-    const width = window.innerWidth * 0.91;
+    const width = window.innerWidth * 0.89;
 
     const path = Paths.find(p => p.path_id === pathId);
     const lat = path ? path.lat : "";
