@@ -6,6 +6,7 @@ import { Stack } from "@mui/material";
 import Paths from "./Paths";
 
 const Path = () => {
+
     const { pathId } = useParams<{ pathId: string }>();
     const height = window.innerHeight - 140;
     const width = window.innerWidth * 0.91;
