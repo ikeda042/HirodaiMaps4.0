@@ -8,6 +8,7 @@ import Paths from "./Paths";
 const Path = () => {
     const { pathId } = useParams<{ pathId: string }>();
     const height = window.innerHeight - 140;
+    const width = window.innerWidth * 0.91;
 
     const path = Paths.find(p => p.path_id === pathId);
     const lat = path ? path.lat : "";
@@ -24,7 +25,7 @@ const Path = () => {
                             id="mapIframe"
                             src={`/routes/${path_key}/map.html?lat=${lat}&lon=${lon}`}
                             title="Map"
-                            style={{ width: '100%', height: height, padding: '0', margin: '0' }}
+                            style={{ width: width, height: height, padding: '0', margin: '0' }}
                         ></iframe>
                     </Box>
                     <BottomNavTT />
