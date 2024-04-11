@@ -3,12 +3,16 @@ import { Box } from "@mui/system";
 import BottomNavTT from "./BottomNavTT";
 import { useParams } from "react-router-dom";
 import { Stack } from "@mui/material";
-
+import Paths from "./Paths";
 
 const Path = () => {
-
-    const { dir, lat, lon } = useParams<{ dir: string, lat: string, lon: string }>();
+    const { pathId } = useParams<{ pathId: string }>();
     const height = window.innerHeight - 140;
+
+    const path = Paths.find(p => p.path_id === pathId);
+    const lat = path ? path.lat : "";
+    const lon = path ? path.lon : "";
+    const path_key = path ? path.path_key : "";
 
     return (
         <>
@@ -18,7 +22,7 @@ const Path = () => {
                     <Box sx={{ width: '100%', maxWidth: '98%', }}>
                         <iframe
                             id="mapIframe"
-                            src={`/routes/${dir}/index.html?lat=${lat}&lon=${lon}`}
+                            src={`/routes/${path_key}/map.html?lat=${lat}&lon=${lon}`}
                             title="Map"
                             style={{ width: '100%', height: height, padding: '0', margin: '0' }}
                         ></iframe>
