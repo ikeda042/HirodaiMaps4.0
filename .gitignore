@@ -4,5 +4,7 @@
 !frontend/**
 !pyfiles/
 !pyfiles/**
+!qr_images/
+!qr_images/**
 !README.md
 
