@@ -7,4 +7,5 @@
 !qr_images/
 !qr_images/**
 !README.md
-
+!building_images_resized/
+!building_images_resized/**

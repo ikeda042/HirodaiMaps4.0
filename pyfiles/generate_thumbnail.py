@@ -1,4 +1,5 @@
 import cv2
+import os 
 
 def resize_image_maintaining_aspect_ratio(image_path, max_size):
     image = cv2.imread(image_path)
@@ -18,4 +19,12 @@ def resize(filename:str,size:int) -> None:
 
 
 if __name__ == '__main__':
-    resize('frontend/public/building1.jpg', 300)
+    print(os.listdir('building_images/'))
+    for i in os.listdir('building_images/'):
+        print(i)
+        res = resize_image_maintaining_aspect_ratio(f'building_images/{i}', 800)
+        cv2.imwrite(f'output/{i.split(".")[0]}_thumbnail.jpg', res)
+    # for i in os.listdir('../building_images/'):
+    #     res = resize_image_maintaining_aspect_ratio(f'../building_images/{i}_resized', 300)
+    #     cv2.imwrite(f'../building_images/{i}_thumbnail.jpg', res)
+    #     print(f'../building_images/{i}_thumbnail.jpg')
