@@ -1,4 +1,5 @@
-const qridDict = {
+
+const qridDict: { [key: string]: string } = {
     '1': '総合科学部支援室前',
     '2': '教育学部　北第２福利会館前',
     '3': '中央図書館前',
@@ -8,5 +9,4 @@ const qridDict = {
     '7': '工学部',
     '8': '大学会館前',
 };
-
 export default qridDict;
