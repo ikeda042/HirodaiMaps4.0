@@ -8,3 +8,5 @@ const qridDict = {
     '7': '工学部',
     '8': '大学会館前',
 };
+
+export default qridDict;
