@@ -27,6 +27,17 @@ export const TopPage = () => {
     const [filteredBuildings, setFilteredBuildings] = useState<Building[]>([]);
     const { checkpointId } = useParams();
 
+    const qridDict: { [key: string]: string } = {
+        '1': '総合科学部支援室前',
+        '2': '教育学部　北第２福利会館前',
+        '3': '中央図書館前',
+        '4': '北第１福利会館前',
+        '5': '中央口交差点',
+        '6': '情報科学部　東福利会館前',
+        '7': '工学部',
+        '8': '大学会館前',
+    };
+
     const handleSearch = (query: string) => {
         setSearchQuery(query);
     };
@@ -53,7 +64,7 @@ export const TopPage = () => {
                 <Box sx={{ marginTop: '64px', marginBottom: '64px' }}>
                     <Box sx={{ border: '1px solid', padding: '10px', marginBottom: '20px', borderRadius: "2%", margin: "7px" }}>
                         <Typography variant="body1">
-                            現在地は{checkpointId}です。検索バーで目的地の建物名を入力して、建物を選択してください。<br></br>
+                            現在地は<b>{checkpointId ? qridDict[checkpointId] : '未定義'}</b>です。検索バーで目的地の建物名を入力して、建物を選択してください。<br></br>
                             (例：文学部、学生プラザ、工学部支援室 など)
                         </Typography>
                     </Box>
