@@ -8,5 +8,6 @@ const qridDict: { [key: string]: string } = {
     '6': '情報科学部　東福利会館前',
     '7': '工学部',
     '8': '大学会館前',
+    '9': '学生プラザ',
 };
 export default qridDict;
