@@ -119,7 +119,7 @@ const buildings = [
         'buildingId': '9',
         'title': '学生プラザ',
         'description': '学生プラザです。',
-        'imageUrl': 'building_images/building2.jpg',
+        'imageUrl': '/building_images/9.jpg',
         'keywords': ["がくせいぷらざ", "学生プラザ", "学プラ", "がくせい", "学生"],
         'tag': 'faculty',
         'mapCoordinate': '#17/34.403814/132.715201',
