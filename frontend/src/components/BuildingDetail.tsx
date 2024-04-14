@@ -19,7 +19,7 @@ const BuildingDetail = () => {
     return (
         <>
             <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', height: '70vh' }}>
-                <NavBar />
+                <NavBar checkpointId={buildingId} />
                 <Card sx={{ maxWidth: '90%', width: '100%', maxHeight: 290, margin: 'auto' }}>
                     <CardActionArea>
                         <CardMedia
