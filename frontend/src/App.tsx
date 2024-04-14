@@ -18,7 +18,7 @@ function App() {
         <Route path="/building/:buildingId" element={
           <BuildingDetail />
         } />
-        <Route path="/timetable/:stopId" element={
+        <Route path="/timetable/:stopId/:checkpointId" element={
           <TimeTable />
         } />
         <Route path="/paths/:pathId" element={
