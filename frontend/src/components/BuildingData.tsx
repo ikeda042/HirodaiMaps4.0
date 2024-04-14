@@ -97,7 +97,7 @@ const buildings = [
         'buildingId': '7',
         'title': '工学部',
         'description': '工学部です。',
-        'imageUrl': 'building_images/building2.jpg',
+        'imageUrl': '/building_images/7.jpg',
         'keywords': ["こうがくぶ", "工学部", "こうがく", "工学", "工学部"],
         'tag': 'faculty',
         'mapCoordinate': '#17/34.403814/132.715201',
