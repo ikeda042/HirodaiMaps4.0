@@ -28,21 +28,21 @@ const BottomNavBarTop = ({ checkpointId }: BottomNavBarTopProps) => {
             display: 'flex',
             justifyContent: 'space-around',
         }}>
-            <Link to={`/timetable/1/${checkpointId}`} style={{ display: 'flex', flexGrow: 1 }}>
+            <Link to={`/timetable/1/${checkpointId}`} style={{ display: 'flex', flexGrow: 1, textDecoration: 'none' }}>
                 <CustomBottomNavigationAction
                     label="時刻表"
                     icon={<DepartureBoardIcon />}
                     showLabel={true}
                 />
             </Link>
-            <Link to="/my-location" style={{ display: 'flex', flexGrow: 1 }}>
+            <Link to="" style={{ display: 'flex', flexGrow: 1, textDecoration: 'none' }}>
                 <CustomBottomNavigationAction
                     label="現在地"
                     icon={<MyLocationIcon />}
                     showLabel={true}
                 />
             </Link>
-            <Link to="" style={{ display: 'flex', flexGrow: 1 }}>
+            <Link to="" style={{ display: 'flex', flexGrow: 1, textDecoration: 'none' }}>
                 <CustomBottomNavigationAction
                     label="近日公開予定"
                     icon={<AccessibleIcon />}
