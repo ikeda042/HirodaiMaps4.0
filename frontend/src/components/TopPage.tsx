@@ -64,7 +64,7 @@ export const TopPage = () => {
                     <SearchBar onSearch={handleSearch} />
                     {filteredBuildings.map((building, i) => (
                         <Link to={`/building/${building.buildingId}`} style={{ textDecoration: 'none' }}>
-                            <BuildingCard key={i} imageUrl={"/building1.jpg"} title={building.title} />
+                            <BuildingCard key={i} imageUrl={`${building.imageUrl}`} title={building.title} />
                         </Link>
                     ))}
                 </Box>
@@ -72,5 +72,4 @@ export const TopPage = () => {
             </Box >
         </>
     );
-
 };
