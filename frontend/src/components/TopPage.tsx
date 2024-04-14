@@ -68,7 +68,7 @@ export const TopPage = () => {
                         </Link>
                     ))}
                 </Box>
-                <BottomNavBar />
+                <BottomNavBar checkpointId={checkpointId} />
             </Box >
         </>
     );
