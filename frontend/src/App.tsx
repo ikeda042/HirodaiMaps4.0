@@ -9,6 +9,9 @@ function App() {
   return (
     <Router>
       <Routes>
+        <Route path="/" element={
+          <TopPage />
+        } />
         <Route path="/:checkpointId" element={
           <TopPage />
         } />
