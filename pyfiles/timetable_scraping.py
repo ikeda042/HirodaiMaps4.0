@@ -18,6 +18,4 @@ now = datetime.now()
 
 datetime_objects = [now.replace(hour=int(time.split(':')[0]), minute=int(time.split(':')[1])) for time in time_deps]
 
-# for dt in datetime_objects:
-#     print(dt)
 
