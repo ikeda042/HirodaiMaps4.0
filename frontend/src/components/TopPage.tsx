@@ -53,7 +53,7 @@ export const TopPage = () => {
             <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', backgroundColor: '#FFFFFF', margin: 0, padding: 0 }}>
                 <NavBar />
                 <Box sx={{ marginTop: '64px', marginBottom: '64px' }}>
-                    <Box sx={{ border: '1px solid', padding: '10px', marginBottom: '20px', borderRadius: "2%", margin: "7px" }}>
+                    <Box sx={{ border: '1px solid', padding: '10px', marginBottom: '20px', margin: "7px", color: "#696969" }}>
                         {checkpointId !== '0' && <Typography variant="body1">
                             現在地は<b>{checkpointId ? qridDict[checkpointId] : '未定義'}</b>です。検索バーで目的地の建物名を入力して、建物を選択してください。<br></br>
                             (例：文学部、学生プラザ、工学部支援室 など)
