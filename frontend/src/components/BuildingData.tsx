@@ -108,7 +108,7 @@ const buildings = [
         'buildingId': '8',
         'title': '学生会館前',
         'description': '学生会館前です。',
-        'imageUrl': 'building_images/building2.jpg',
+        'imageUrl': '/building_images/8.jpg',
         'keywords': ["がくせいかいかんまえ", "学生会館前", "学生会館", "がくせいかいかん"],
         'tag': 'faculty',
         'mapCoordinate': '#17/34.403814/132.715201',
