@@ -62,6 +62,14 @@ const Paths = [
     { "path_id": "61", "path_key": "d_i", "lat": "34.39847", "lon": "132.71344", "title": "学生会館前" },
     { "path_id": "62", "path_key": "d_j", "lat": "34.39847", "lon": "132.71344", "title": "学生会館前" },
     { "path_id": "63", "path_key": "d_m", "lat": "34.39847", "lon": "132.71344", "title": "学生会館前" },
-    { "path_id": "64", "path_key": "d_s", "lat": "34.39847", "lon": "132.71344", "title": "学生会館前" }
+    { "path_id": "64", "path_key": "d_s", "lat": "34.39847", "lon": "132.71344", "title": "学生会館前" },
+    { "path_id": "65", "path_key": "g_b", "lat": "34.40068", "lon": "132.71108", "title": "学生プラザ" },
+    { "path_id": "66", "path_key": "g_e", "lat": "34.40068", "lon": "132.71108", "title": "学生プラザ" },
+    { "path_id": "67", "path_key": "g_j", "lat": "34.40068", "lon": "132.71108", "title": "学生プラザ" },
+    { "path_id": "68", "path_key": "g_k", "lat": "34.40068", "lon": "132.71108", "title": "学生プラザ" },
+    { "path_id": "69", "path_key": "g_i", "lat": "34.40068", "lon": "132.71108", "title": "学生プラザ" },
+    { "path_id": "70", "path_key": "g_j", "lat": "34.40068", "lon": "132.71108", "title": "学生プラザ" },
+    { "path_id": "71", "path_key": "g_m", "lat": "34.40068", "lon": "132.71108", "title": "学生プラザ" },
+    { "path_id": "72", "path_key": "g_s", "lat": "34.40068", "lon": "132.71108", "title": "学生プラザ" },
 ]
 export default Paths;
