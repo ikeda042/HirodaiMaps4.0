@@ -26,7 +26,8 @@ type Building = {
 export const TopPage = () => {
     const [searchQuery, setSearchQuery] = useState('');
     const [filteredBuildings, setFilteredBuildings] = useState<Building[]>([]);
-    const { checkpointId } = useParams();
+    const { checkpointId: rawCheckpointId } = useParams<{ checkpointId?: string }>();
+    const checkpointId = rawCheckpointId || '0';
 
     const handleSearch = (query: string) => {
         setSearchQuery(query);
