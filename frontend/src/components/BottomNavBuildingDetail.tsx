@@ -35,9 +35,9 @@ const BottomNavBarBuildingDetail = ({ checkpointId }: BottomNavBarTopProps) => {
                     showLabel={true}
                 />
             </Link>
-            <Link to={`/building/${checkpointId}`} style={{ display: 'flex', flexGrow: 1, textDecoration: 'none' }}>
+            <Link to={``} style={{ display: 'flex', flexGrow: 1, textDecoration: 'none' }}>
                 <CustomBottomNavigationAction
-                    label="経路を表示"
+                    label="近日公開予定"
                     icon={<AssistantDirectionIcon />}
                     showLabel={true}
                 />
