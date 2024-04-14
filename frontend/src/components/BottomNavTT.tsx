@@ -15,7 +15,11 @@ const CustomBottomNavigationAction = styled(BottomNavigationAction)((theme) => (
     }
 }));
 
-const BottomNavBarTT = () => {
+interface BottomNavBarTopProps {
+    checkpointId?: string;
+}
+
+const BottomNavBarTT = ({ checkpointId }: BottomNavBarTopProps) => {
     return (
         <BottomNavigation style={{
             width: '100%',
@@ -25,7 +29,7 @@ const BottomNavBarTT = () => {
             display: 'flex',
             justifyContent: 'space-around',
         }}>
-            <Link to="/" style={{ display: 'flex', flexGrow: 1 }}>
+            <Link to={`/${checkpointId}`} style={{ display: 'flex', flexGrow: 1 }}>
                 <CustomBottomNavigationAction
                     label="Home"
                     icon={<ApartmentIcon />}
