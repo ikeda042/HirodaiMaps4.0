@@ -9,7 +9,7 @@ import { NavBar } from './Navbar';
 import Box from '@mui/material/Box';
 import Map from './Map';
 import buildings from './BuildingData';
-import BottomNavBarTop from './BottomNavTop';
+import BottomNavBarBuildingDetail from './BottomNavBuildingDetail';
 
 
 const BuildingDetail = () => {
@@ -42,7 +42,7 @@ const BuildingDetail = () => {
             <Box sx={{ width: '100%', maxWidth: '90%', aspectRatio: '1', margin: 'auto', mb: "100px" }}>
                 <Map lat={`${building?.lat}`} lon={`${building?.lon}`} title={`${building?.title}`} />
             </Box>
-            <BottomNavBarTop />
+            <BottomNavBarBuildingDetail checkpointId={buildingId} />
         </>
     );
 
