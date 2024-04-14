@@ -74,7 +74,7 @@ const buildings = [
         "buildingId": "5",
         "title": "中央口交差点",
         "description": "中央口交差点です。",
-        "imageUrl": "building_images/building2.jpg",
+        "imageUrl": "/building_images/5.jpg",
         "keywords": ["ちゅうおうぐちこうさてん", "中央口交差点", "中央口", "交差点"],
         "tag": "faculty",
         "mapCoordinate": "#17/34.403814/132.715201",
