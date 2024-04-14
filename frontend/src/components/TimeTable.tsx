@@ -54,7 +54,7 @@ const TimeTable = () => {
     return (
         <>
             <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', backgroundColor: '#FFFFFF', margin: 0, padding: 0 }}>
-                <NavBar />
+                <NavBar checkpointId={checkpointId} />
                 <Typography variant="h6" sx={{ marginTop: '64px', textAlign: 'center' }}>西条駅までのバス時刻表</Typography>
                 <Select
                     value={stopId}
