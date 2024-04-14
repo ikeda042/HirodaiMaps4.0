@@ -30,10 +30,10 @@ const BuildingDetail = () => {
                         />
                         <CardContent>
                             <Typography gutterBottom variant="h5" component="div">
-                                id = {buildingId}
+                                {building?.title}
                             </Typography>
                             <Typography variant="body2" color="text.secondary">
-                                {"説明:id" + buildingId}
+                                {building?.description}
                             </Typography>
                         </CardContent>
                     </CardActionArea>
