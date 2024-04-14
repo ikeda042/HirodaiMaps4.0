@@ -31,20 +31,23 @@ const BottomNavBarTT = ({ checkpointId }: BottomNavBarTopProps) => {
         }}>
             <Link to={`/${checkpointId}`} style={{ display: 'flex', flexGrow: 1 }}>
                 <CustomBottomNavigationAction
-                    label="Home"
+                    label="建物リスト"
                     icon={<ApartmentIcon />}
+                    showLabel={true}
                 />
             </Link>
             <Link to="/my-location" style={{ display: 'flex', flexGrow: 1 }}>
                 <CustomBottomNavigationAction
-                    label="My Location"
+                    label="現在地を表示"
                     icon={<MyLocationIcon />}
+                    showLabel={true}
                 />
             </Link>
-            <Link to="/accessibility" style={{ display: 'flex', flexGrow: 1 }}>
+            <Link to="/${checkpointId}" style={{ display: 'flex', flexGrow: 1 }}>
                 <CustomBottomNavigationAction
-                    label="Accessibility"
+                    label="近日公開予定"
                     icon={<AccessibleIcon />}
+                    showLabel={true}
                 />
             </Link>
         </BottomNavigation >
