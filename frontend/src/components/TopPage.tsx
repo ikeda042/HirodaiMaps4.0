@@ -54,10 +54,12 @@ export const TopPage = () => {
                 <NavBar />
                 <Box sx={{ marginTop: '64px', marginBottom: '64px' }}>
                     <Box sx={{ border: '1px solid', padding: '10px', marginBottom: '20px', borderRadius: "2%", margin: "7px" }}>
-                        <Typography variant="body1">
+                        {checkpointId !== '0' && <Typography variant="body1">
                             現在地は<b>{checkpointId ? qridDict[checkpointId] : '未定義'}</b>です。検索バーで目的地の建物名を入力して、建物を選択してください。<br></br>
                             (例：文学部、学生プラザ、工学部支援室 など)
-                        </Typography>
+                        </Typography>}
+                        {checkpointId === '0' && <Typography variant="body1">検索バーで目的地の建物名を入力して、建物を選択してください。<br></br>
+                            (例：文学部、学生プラザ、工学部支援室 など)</Typography>}
                     </Box>
                     <SearchBar onSearch={handleSearch} />
                     {filteredBuildings.map((building, i) => (
