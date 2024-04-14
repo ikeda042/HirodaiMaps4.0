@@ -78,7 +78,7 @@ const TimeTable = () => {
                     </Timeline>
                 </Box>
             </Box >
-            <BottomNavBarTT />
+            <BottomNavBarTT checkpointId={checkpointId} />
         </>
     )
 }
