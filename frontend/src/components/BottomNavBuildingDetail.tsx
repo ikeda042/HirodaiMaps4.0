@@ -1,10 +1,10 @@
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import DepartureBoardIcon from '@mui/icons-material/DepartureBoard';
-import MyLocationIcon from '@mui/icons-material/MyLocation';
 import { styled } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
 import ApartmentIcon from '@mui/icons-material/Apartment';
+import AssistantDirectionIcon from '@mui/icons-material/AssistantDirection';
 
 const CustomBottomNavigationAction = styled(BottomNavigationAction)((theme) => ({
     borderRight: '1px solid rgba(0, 0, 0, 0.12)',
@@ -37,8 +37,8 @@ const BottomNavBarBuildingDetail = ({ checkpointId }: BottomNavBarTopProps) => {
             </Link>
             <Link to={`/building/${checkpointId}`} style={{ display: 'flex', flexGrow: 1, textDecoration: 'none' }}>
                 <CustomBottomNavigationAction
-                    label="現在地"
-                    icon={<MyLocationIcon />}
+                    label="経路を表示"
+                    icon={<AssistantDirectionIcon />}
                     showLabel={true}
                 />
             </Link>
