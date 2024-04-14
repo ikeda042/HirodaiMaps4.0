@@ -10,7 +10,6 @@ import Box from '@mui/material/Box';
 import Map from './Map';
 import buildings from './BuildingData';
 import BottomNavBarTop from './BottomNavTop';
-import { useEffect } from 'react';
 
 
 const BuildingDetail = () => {
