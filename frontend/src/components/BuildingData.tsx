@@ -85,7 +85,7 @@ const buildings = [
         'buildingId': '6',
         'title': '情報科学部',
         'description': '情報科学部です。',
-        'imageUrl': '/building_images/7.jpg',
+        'imageUrl': '/building_images/6.jpg',
 
         'keywords': ["じょうほうかがくぶ", "情報科学部", "じょうほう", "情報", "情報科学部"],
         'tag': 'faculty',
