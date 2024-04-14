@@ -26,7 +26,7 @@ const BuildingDetail = () => {
                         <CardMedia
                             component="img"
                             height="200"
-                            image={`/building1.jpg`}
+                            image={`${building?.imageUrl}`}
                             alt={"ALT"}
                         />
                         <CardContent>
