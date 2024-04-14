@@ -15,7 +15,7 @@ function App() {
         <Route path="/:checkpointId" element={
           <TopPage />
         } />
-        <Route path="/building/:buildingId" element={
+        <Route path="/building/:buildingId/:checkpointId" element={
           <BuildingDetail />
         } />
         <Route path="/timetable/:stopId/:checkpointId" element={
