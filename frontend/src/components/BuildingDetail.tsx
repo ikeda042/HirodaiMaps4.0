@@ -13,13 +13,13 @@ import BottomNavBarBuildingDetail from './BottomNavBuildingDetail';
 
 
 const BuildingDetail = () => {
-    const { buildingId } = useParams();
+    const { buildingId, checkpointId } = useParams();
     const building = buildings.find(b => b.buildingId === buildingId);
 
     return (
         <>
             <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', height: '70vh' }}>
-                <NavBar checkpointId={buildingId} />
+                <NavBar checkpointId={checkpointId} />
                 <Card sx={{ maxWidth: '90%', width: '100%', maxHeight: 290, margin: 'auto' }}>
                     <CardActionArea>
                         <CardMedia
@@ -42,7 +42,7 @@ const BuildingDetail = () => {
             <Box sx={{ width: '100%', maxWidth: '90%', aspectRatio: '1', margin: 'auto', mb: "100px" }}>
                 <Map lat={`${building?.lat}`} lon={`${building?.lon}`} title={`${building?.title}`} />
             </Box>
-            <BottomNavBarBuildingDetail checkpointId={buildingId} />
+            <BottomNavBarBuildingDetail checkpointId={checkpointId} />
         </>
     );
 
