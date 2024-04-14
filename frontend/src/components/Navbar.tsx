@@ -5,10 +5,14 @@ import Typography from '@mui/material/Typography';
 import QrCodeIcon from '@mui/icons-material/QrCode';
 import { Link } from 'react-router-dom';
 
-export const NavBar = () => {
+interface BottomNavBarTopProps {
+    checkpointId?: string;
+}
+
+export const NavBar = ({ checkpointId }: BottomNavBarTopProps) => {
     return (
         <Box >
-            <Link to={"/"}>
+            <Link to={`/${checkpointId}`}>
                 <AppBar sx={{ backgroundColor: '#005e3c', position: "fixed" }}>
 
                     <Toolbar>
