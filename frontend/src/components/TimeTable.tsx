@@ -13,10 +13,11 @@ import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import { SelectChangeEvent } from '@mui/material/Select';
 import BottomNavBarTT from './BottomNavTT';
+import { Typography } from '@mui/material';
 
 const TimeTable = () => {
 
-    const { stopId: initialStopId } = useParams<{ stopId: string }>();
+    const { stopId: initialStopId, checkpointId } = useParams<{ stopId: string, checkpointId: string }>();
     const [stopId, setStopId] = useState<string>(initialStopId ?? '1');
 
     const handleChange = (event: SelectChangeEvent<string>) => {
@@ -54,6 +55,7 @@ const TimeTable = () => {
         <>
             <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', backgroundColor: '#FFFFFF', margin: 0, padding: 0 }}>
                 <NavBar />
+                <Typography variant="h4" sx={{ marginTop: '64px', marginBottom: '16px', marginLeft: '16px', marginRight: '16px' }}>{checkpointId}</Typography>
                 <Select
                     value={stopId}
                     onChange={handleChange}
