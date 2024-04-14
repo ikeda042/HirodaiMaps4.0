@@ -14,7 +14,11 @@ const CustomBottomNavigationAction = styled(BottomNavigationAction)((theme) => (
     }
 }));
 
-const BottomNavBarTop = () => {
+interface BottomNavBarTopProps {
+    checkpointId?: string;
+}
+
+const BottomNavBarTop = ({ checkpointId }: BottomNavBarTopProps) => {
     return (
         <BottomNavigation style={{
             width: '100%',
@@ -24,7 +28,7 @@ const BottomNavBarTop = () => {
             display: 'flex',
             justifyContent: 'space-around',
         }}>
-            <Link to="/timetable/1" style={{ display: 'flex', flexGrow: 1 }}>
+            <Link to={`/timetable/1/${checkpointId}`} style={{ display: 'flex', flexGrow: 1 }}>
                 <CustomBottomNavigationAction
                     label="Departure"
                     icon={<DepartureBoardIcon />}
