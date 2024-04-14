@@ -55,11 +55,11 @@ const TimeTable = () => {
         <>
             <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', backgroundColor: '#FFFFFF', margin: 0, padding: 0 }}>
                 <NavBar />
-                <Typography variant="h4" sx={{ marginTop: '64px', marginBottom: '16px', marginLeft: '16px', marginRight: '16px' }}>{checkpointId}</Typography>
+                <Typography variant="h6" sx={{ marginTop: '64px', textAlign: 'center' }}>西条駅までのバス時刻表</Typography>
                 <Select
                     value={stopId}
                     onChange={handleChange}
-                    sx={{ marginTop: '80px', marginBottom: '30px', marginLeft: '16px', marginRight: '16px' }}
+                    sx={{ marginTop: '10px', marginBottom: '30px', marginLeft: '16px', marginRight: '16px' }}
                 >
                     <MenuItem value="1">広大中央口から西条駅</MenuItem>
                     <MenuItem value="2">大学会館前から西条駅</MenuItem>
