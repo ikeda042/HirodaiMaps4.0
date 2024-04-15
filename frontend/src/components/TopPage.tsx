@@ -51,7 +51,7 @@ export const TopPage = () => {
     return (
         <>
             <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', backgroundColor: '#FFFFFF', margin: 0, padding: 0 }}>
-                <NavBar />
+                <NavBar checkpointId={checkpointId} />
                 <Box sx={{ marginTop: '64px', marginBottom: '64px' }}>
                     <Box sx={{ border: '1px solid', padding: '10px', marginBottom: '20px', margin: "7px", color: "#696969" }}>
                         {checkpointId !== '0' && <Typography variant="body1">
