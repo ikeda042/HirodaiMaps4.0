@@ -36,9 +36,9 @@ const BottomNavBarTop = ({ checkpointId }: BottomNavBarTopProps) => {
                 />
             </Link>
             {/* <Link to={`/building/${checkpointId}/${checkpointId}`} style={{ display: 'flex', flexGrow: 1, textDecoration: 'none' }}> */}
-            <Link to={``} style={{ display: 'flex', flexGrow: 1, textDecoration: 'none' }}>
+            <Link to={`/checkpoint/${checkpointId}`} style={{ display: 'flex', flexGrow: 1, textDecoration: 'none' }}>
                 <CustomBottomNavigationAction
-                    label="近日公開予定"
+                    label="現在地"
                     icon={<MyLocationIcon />}
                     showLabel={true}
                 />
