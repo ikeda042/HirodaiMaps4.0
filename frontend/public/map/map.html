@@ -13,7 +13,8 @@
     <style>
         #map {
             width: 350px;
-            height: 350px;
+            height: 600px;
+            margin: -10px;
         }
     </style>
     <title></title>
@@ -61,7 +62,7 @@
             zoomControl: true,
             maxZoom: 28,
             minZoom: 1
-        }).setView([parseFloat(lat_query), parseFloat(lon_query)], 18); // ここで lat と lon を正しく設定
+        }).setView([parseFloat(lat_query), parseFloat(lon_query)], 17); // ここで lat と lon を正しく設定
 
         function addPoint(lat, lon, title) {
             var pointLocation = L.latLng(lat, lon);
