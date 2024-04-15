@@ -8,13 +8,12 @@ import { CardActionArea } from '@mui/material';
 import { NavBar } from './Navbar';
 import Box from '@mui/material/Box';
 import Map from './Map';
-import buildings from './BuildingData';
 import BottomNavBarBuildingDetail from './BottomNavBuildingDetail';
-
+import checkpoints from './CheckpointData';
 
 const CheckpointDetail = () => {
-    const { buildingId, checkpointId } = useParams();
-    const building = buildings.find(b => b.buildingId === buildingId);
+    const { checkpointId } = useParams();
+    const checkpoint = checkpoints.find(c => c.checkpointId === checkpointId);
 
     return (
         <>
@@ -25,22 +24,22 @@ const CheckpointDetail = () => {
                         <CardMedia
                             component="img"
                             height="200"
-                            image={`${building?.imageUrl}`}
+                            image={`${checkpoint?.imageUrl}`}
                             alt={"ALT"}
                         />
                         <CardContent>
                             <Typography gutterBottom variant="h5" component="div">
-                                {building?.title}
+                                {checkpoint?.title}
                             </Typography>
                             <Typography variant="body2" color="text.secondary">
-                                {building?.description}
+                                {checkpoint?.description}
                             </Typography>
                         </CardContent>
                     </CardActionArea>
                 </Card>
             </Box >
             <Box sx={{ width: '100%', maxWidth: '90%', aspectRatio: '1', margin: 'auto', mb: "100px" }}>
-                <Map lat={`${building?.lat}`} lon={`${building?.lon}`} title={`${building?.title}`} />
+                <Map lat={`${checkpoint?.lat}`} lon={`${checkpoint?.lon}`} title={`${checkpoint?.title}`} />
             </Box>
             <BottomNavBarBuildingDetail checkpointId={checkpointId} />
         </>
