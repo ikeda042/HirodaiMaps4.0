@@ -19,11 +19,12 @@ def resize(filename:str,size:int) -> None:
 
 
 if __name__ == '__main__':
-    print(os.listdir('building_images/'))
-    for i in os.listdir('building_images/'):
+    filenames = [i for i in os.listdir('goal/') if i.endswith('.jpg') and not i.split(".")[0].endswith('_thumbnail')]
+    print(filenames)
+    for i in filenames:
         print(i)
-        res = resize_image_maintaining_aspect_ratio(f'building_images/{i}', 800)
-        cv2.imwrite(f'output/{i.split(".")[0]}_thumbnail.jpg', res)
+        res = resize_image_maintaining_aspect_ratio(f'goal/{i}', 1000)
+        cv2.imwrite(f'goal/{i.split("/")[-1].split(".")[0]}_thumbnail.jpg', res)
     # for i in os.listdir('../building_images/'):
     #     res = resize_image_maintaining_aspect_ratio(f'../building_images/{i}_resized', 300)
     #     cv2.imwrite(f'../building_images/{i}_thumbnail.jpg', res)
