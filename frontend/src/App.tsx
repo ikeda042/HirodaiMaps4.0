@@ -4,6 +4,7 @@ import { TopPage } from './components/TopPage';
 import BuildingDetail from './components/BuildingDetail';
 import TimeTable from './components/TimeTable';
 import Path from './components/Path';
+import CheckpointDetail from './components/CheckpointDetail';
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
         } />
         <Route path="/paths/:pathId" element={
           < Path />
+        } />
+        <Route path="/checkpoint/:checkpointId" element={
+          <CheckpointDetail />
         } />
       </Routes>
     </Router >
