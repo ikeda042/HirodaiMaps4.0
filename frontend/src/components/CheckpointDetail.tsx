@@ -8,7 +8,7 @@ import { CardActionArea } from '@mui/material';
 import { NavBar } from './Navbar';
 import Box from '@mui/material/Box';
 import Map from './Map';
-import BottomNavBarBuildingDetail from './BottomNavBuildingDetail';
+import BottomNavCheckpointDetail from './BottomNavCheckpointDetail';
 import checkpoints from './CheckpointData';
 
 const CheckpointDetail = () => {
@@ -41,7 +41,7 @@ const CheckpointDetail = () => {
             <Box sx={{ width: '100%', maxWidth: '90%', aspectRatio: '1', margin: 'auto', mb: "100px" }}>
                 <Map lat={`${checkpoint?.lat}`} lon={`${checkpoint?.lon}`} title={`${checkpoint?.title}`} />
             </Box>
-            <BottomNavBarBuildingDetail checkpointId={checkpointId} />
+            <BottomNavCheckpointDetail checkpointId={checkpointId} />
         </>
     );
 }
