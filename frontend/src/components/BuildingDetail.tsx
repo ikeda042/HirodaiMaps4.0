@@ -9,12 +9,16 @@ import { NavBar } from './Navbar';
 import Box from '@mui/material/Box';
 import Map from './Map';
 import buildings from './BuildingData';
+import checkpoints from './CheckpointData';
 import BottomNavBarBuildingDetail from './BottomNavBuildingDetail';
 
 
 const BuildingDetail = () => {
     const { buildingId, checkpointId } = useParams();
     const building = buildings.find(b => b.buildingId === buildingId);
+    const checkpoint = checkpoints.find(c => c.checkpointId === checkpointId);
+    const startKey = checkpoint?.key;
+    const endKey = building?.key;
 
     return (
         <>
@@ -42,7 +46,7 @@ const BuildingDetail = () => {
             <Box sx={{ width: '100%', maxWidth: '90%', aspectRatio: '1', margin: 'auto', mb: "100px" }}>
                 <Map lat={`${building?.lat}`} lon={`${building?.lon}`} title={`${building?.title}`} />
             </Box>
-            <BottomNavBarBuildingDetail checkpointId={checkpointId} />
+            <BottomNavBarBuildingDetail checkpointId={checkpointId} startKey={startKey} endKey={endKey} />
         </>
     );
 
