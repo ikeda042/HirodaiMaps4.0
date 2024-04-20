@@ -1,9 +1,10 @@
 import { NavBar } from "./Navbar";
 import { Box } from "@mui/system";
-import BottomNavTT from "./BottomNavTT";
+import BottomNavPath from "./BottomNavPath";
 import { useParams } from "react-router-dom";
 import { Stack } from "@mui/material";
 import Paths from "./Paths";
+
 
 const Path = () => {
 
@@ -29,7 +30,7 @@ const Path = () => {
                             style={{ width: width, height: height, padding: '0', margin: '0' }}
                         ></iframe>
                     </Box>
-                    <BottomNavTT />
+                    <BottomNavPath checkpointId={checkpointId} />
                 </Stack>
             </Box>
         </>
