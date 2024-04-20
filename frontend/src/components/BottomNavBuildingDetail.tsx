@@ -5,6 +5,7 @@ import { styled } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
 import ApartmentIcon from '@mui/icons-material/Apartment';
 import AssistantDirectionIcon from '@mui/icons-material/AssistantDirection';
+import path from 'path';
 
 const CustomBottomNavigationAction = styled(BottomNavigationAction)((theme) => ({
     borderRight: '1px solid rgba(0, 0, 0, 0.12)',
@@ -16,9 +17,12 @@ const CustomBottomNavigationAction = styled(BottomNavigationAction)((theme) => (
 
 interface BottomNavBarTopProps {
     checkpointId?: string;
+    startKey?: string;
+    endKey?: string;
 }
 
-const BottomNavBarBuildingDetail = ({ checkpointId }: BottomNavBarTopProps) => {
+const BottomNavBarBuildingDetail = ({ checkpointId,startKey,endKey}: BottomNavBarTopProps) => {
+    const pathKey = startKey + "_" + endKey;
     return (
         <BottomNavigation style={{
             width: '100%',
@@ -35,9 +39,9 @@ const BottomNavBarBuildingDetail = ({ checkpointId }: BottomNavBarTopProps) => {
                     showLabel={true}
                 />
             </Link>
-            <Link to={``} style={{ display: 'flex', flexGrow: 1, textDecoration: 'none' }}>
+            <Link to={`/paths/${pathKey ?? ""}`} style={{ display: 'flex', flexGrow: 1, textDecoration: 'none' }}>
                 <CustomBottomNavigationAction
-                    label="近日公開予定"
+                    label="経路を表示"
                     icon={<AssistantDirectionIcon />}
                     showLabel={true}
                 />
