@@ -15,7 +15,7 @@ const Path = () => {
     const lat = path ? path.lat : "";
     const lon = path ? path.lon : "";
     const path_key = path ? path.path_key : "";
-
+   
     return (
         <>
             <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
