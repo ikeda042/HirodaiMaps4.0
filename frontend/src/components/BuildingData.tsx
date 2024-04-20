@@ -36,7 +36,7 @@ const buildings = [
         'buildingId': '3',
         'title': '文学部',
         'description': '文学部の講義棟周辺です。',
-        'imageUrl': '/building_images/3.jpg',
+        'imageUrl': '/building_images/14.png',
         'keywords': ["ぶんがくぶ", "文学部", "ぶんがく", "文学"],
         'tag': 'faculty',
         'mapCoordinate': '#17/34.403814/132.715201',
