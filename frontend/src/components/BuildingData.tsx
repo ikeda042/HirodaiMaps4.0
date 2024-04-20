@@ -11,7 +11,7 @@ const buildings = [
     {
         'buildingId': '1',
         'title': '総合科学部',
-        'description': '総合科学部の講義棟周辺です。',
+        'description': '総合科学部の講義棟周辺ですの説明です。',
         'imageUrl': '/building_images/1.jpg',
         'keywords': ["そうかとう", "総合科学部", "総科", "そうか", "総合科学", "そうごうかがく", "IGS", "教養", "総科本部", "総合科学部本部", "総科支援室", "総合科学部支援室"],
         'tag': 'faculty',
