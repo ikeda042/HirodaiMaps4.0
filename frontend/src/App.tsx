@@ -22,7 +22,7 @@ function App() {
         <Route path="/timetable/:stopId/:checkpointId" element={
           <TimeTable />
         } />
-        <Route path="/paths/:pathId" element={
+        <Route path="/paths/:pathId/:checkpointId" element={
           < Path />
         } />
         <Route path="/checkpoint/:checkpointId" element={
