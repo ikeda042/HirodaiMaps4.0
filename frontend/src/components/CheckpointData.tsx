@@ -9,6 +9,7 @@ const checkpoints = [
         'mapCoordinate': '#17/34.403814/132.715201',
         'lat': '34.39929103384179143',
         'lon': '132.7110850149721557',
+        'key': 'i',
     },
     {
         'checkpointId': '2',
@@ -20,6 +21,7 @@ const checkpoints = [
         'mapCoordinate': '#17/34.403814/132.715201',
         'lat': '34.40297405819667631',
         'lon': '132.71126061576700295',
+        'key': 'k',
     },
     {
         'checkpointId': '3',
@@ -31,6 +33,7 @@ const checkpoints = [
         'mapCoordinate': '#17/34.403814/132.715201',
         'lat': '34.40327873975600426',
         'lon': '132.71315408190230301',
+        'key': 'l',
     },
     {
         'checkpointId': '4',
@@ -42,6 +45,7 @@ const checkpoints = [
         'mapCoordinate': '#17/34.403814/132.715201',
         'lat': '34.40357441655767445',
         'lon': '132.71431955189419227',
+        'key': 'n',
     },
     {
         "checkpointId": "5",
@@ -52,19 +56,20 @@ const checkpoints = [
         "tag": "faculty",
         "mapCoordinate": "#17/34.403814/132.715201",
         "lat": "34.40466338084781484",
-        "lon": "132.7147174642223888"
+        "lon": "132.7147174642223888",
+        'key': 'c',
     },
     {
         'checkpointId': '6',
         'title': '情報科学部',
         'description': '情報科学部です。',
         'imageUrl': '/building_images/6.jpg',
-
         'keywords': ["じょうほうかがくぶ", "情報科学部", "じょうほう", "情報", "情報科学部"],
         'tag': 'faculty',
         'mapCoordinate': '#17/34.403814/132.715201',
         'lat': '34.40183830947186294',
         'lon': '132.71427374652378717',
+        'key': 'j',
     },
     {
         'checkpointId': '7',
@@ -76,6 +81,7 @@ const checkpoints = [
         'mapCoordinate': '#17/34.403814/132.715201',
         'lat': '34.3997809561484047',
         'lon': '132.71339417135317262',
+        'key': 'm',
     },
     {
         'checkpointId': '8',
@@ -87,6 +93,7 @@ const checkpoints = [
         'mapCoordinate': '#17/34.403814/132.715201',
         'lat': '34.39847004425039501',
         'lon': '132.71343554063628289',
+        'key': 'd',
     },
     {
         'checkpointId': '9',
@@ -98,6 +105,7 @@ const checkpoints = [
         'mapCoordinate': '#17/34.403814/132.715201',
         'lat': '34.40068',
         'lon': '132.71108',
+        'key': 'g',
     }
 ];
 
