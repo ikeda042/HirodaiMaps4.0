@@ -7,7 +7,7 @@ import Paths from "./Paths";
 
 const Path = () => {
 
-    const { pathId } = useParams<{ pathId: string }>();
+    const { pathId, checkpointId } = useParams();
     const height = window.innerHeight - 140;
     const width = window.innerWidth * 0.89;
 
