@@ -24,7 +24,7 @@ const buildings = [
         'buildingId': '2',
         'title': '教育学部',
         'description': '教育学部の講義棟周辺です。',
-        'imageUrl': '/building_images/2.jpg',
+        'imageUrl': '/building_images/10.jpg',
         'keywords': ["きょういくがくぶ", "教育学部", "きょういく", "教育", "初等", "教英", "教心", "教国", "教日", "教数", "教社", "なちゅ"],
         'tag': 'faculty',
         'mapCoordinate': '#17/34.403814/132.715201',
