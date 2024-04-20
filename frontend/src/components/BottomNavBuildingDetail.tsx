@@ -46,7 +46,7 @@ const BottomNavBarBuildingDetail = ({ checkpointId,startKey,endKey}: BottomNavBa
                     showLabel={true}
                 />
             </Link>
-            <Link to={`/paths/${path_id ?? ""}`} style={{ display: 'flex', flexGrow: 1, textDecoration: 'none' }}>
+            <Link to={`/paths/${path_id ?? ""}/${checkpointId}`} style={{ display: 'flex', flexGrow: 1, textDecoration: 'none' }}>
                 <CustomBottomNavigationAction
                     label="経路を表示"
                     icon={<AssistantDirectionIcon />}
