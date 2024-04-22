@@ -63,7 +63,7 @@ const buildings = [
         'imageUrl': '/building_images/11.jpg',
         'keywords': ["りがくぶ", "理学部", "理生", "ちくわ", "理物"],
         'tag': "faculty",
-        'mapCoordinate": '#17/34.403814/132.715201',
+        'mapCoordinate': '#17/34.403814/132.715201',
         'lat': '34.40371091114273838',
         'lon': '132.71470858348288857',
         'key': 'r',
