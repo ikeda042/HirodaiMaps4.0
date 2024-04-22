@@ -71,5 +71,14 @@ const Paths = [
     { "path_id": "70", "path_key": "g_j", "lat": "34.40068", "lon": "132.71108", "title": "学生プラザ" },
     { "path_id": "71", "path_key": "g_m", "lat": "34.40068", "lon": "132.71108", "title": "学生プラザ" },
     { "path_id": "72", "path_key": "g_s", "lat": "34.40068", "lon": "132.71108", "title": "学生プラザ" },
+    { "path_id": "73", "path_key": "i_r", "lat": "34.39933", "lon": "132.71111", "title": "総合科学部" },
+    { "path_id": "74", "path_key": "k_r", "lat": "34.402974", "lon": "132.71126", "title": "教育学部" },
+    { "path_id": "75", "path_key": "l_r", "lat": "34.403279", "lon": "132.71315", "title": "中央図書館前" },
+    { "path_id": "76", "path_key": "n_r", "lat": "34.403574", "lon": "132.71431", "title": "北第１福利会館前" },
+    { "path_id": "77", "path_key": "c_r", "lat": "34.404663", "lon": "132.71471", "title": "中央口交差点" },
+    { "path_id": "78", "path_key": "j_r", "lat": "34.401838", "lon": "132.71427", "title": "情報科学部" },
+    { "path_id": "79", "path_key": "m_r", "lat": "34.399781", "lon": "132.71339", "title": "工学部" },
+    { "path_id": "80", "path_key": "d_r", "lat": "34.39847", "lon": "132.71344", "title": "学生会館前" },
+    { "path_id": "81", "path_key": "g_r", "lat": "34.40068", "lon": "132.71108", "title": "学生プラザ" },
 ]
 export default Paths;
